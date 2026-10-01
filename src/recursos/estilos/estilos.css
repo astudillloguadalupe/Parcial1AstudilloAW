@@ -132,6 +132,37 @@ ul{
     background-color: #d7d0c7;
     border: 1px solid #999999;
 }
+.esquema-semantico{
+    width: 100%;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: #f3f0ea;
+}
+.bloque-header,
+.bloque-nav,
+.bloque-main,
+.bloque-section,
+.bloque-article,
+.bloque-footer{
+    padding: 10px;
+    border: 1px solid #777777;
+    text-align: center;
+}
+
+.bloque-main{
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+}
+
+.bloque-section{
+    display: flex;
+    flex-direction:column;
+    gap: 8px;
+}
 
 .informacion-proyecto {
     width: 50%;
