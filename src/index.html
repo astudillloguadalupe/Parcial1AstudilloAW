@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arquitectura semantica HTML5 y modelo de caja CSS</title>
+    <title>Arquitectura semántica HTML5 y modelo de caja CSS</title>
 
     <link rel="icon" type="image/png" href="./recursos/imagenes/cubo.png">
     <link rel="stylesheet" href="./recursos/estilos/estilos.css">
@@ -30,7 +30,7 @@
     <main class="contenido-principal">
         <section class="presentacion" id="inicio">
             <p class="etiqueta">APLICACIONES WEB 1 | PARCIAL 1</p>
-            <h1>Arquitectura semantica HTML5 y modelo de caja CSS</h1>
+            <h1>Arquitectura semántica HTML5 y modelo de caja CSS</h1>
             <p class="introduccion">
                 Esta demostración relaciona la estructura semántica de HTML5
                 con el modelo de caja de CSS, mostrando cómo ambos lenguajes
@@ -57,12 +57,11 @@
 
                         <div class="bloque-header">
                             <p>&lt;header&gt;</p>
+                        
+                            <div class="bloque-nav">
+                                <p>&lt;nav&gt;</p>
+                            </div>
                         </div>
-
-                        <div class="bloque-nav">
-                            <p>&lt;nav&gt;</p>
-                        </div>
-
                         <div class="bloque-main">
                             <p>&lt;main&gt;</p>
 
@@ -97,8 +96,8 @@
                          &lt;article&gt; y &lt;footer&gt; para construir una estructura clara.
                     </p>
                     <p>
-                        Cada elemneto aporta significado a la estructura del documento y
-                        facilita su interpretacion por navegadores, lectores de pantalla
+                        Cada elemento aporta significado a la estructura del documento y
+                        facilita su interpretación por navegadores, lectores de pantalla
                         y motores de búsqueda.
                     </p>
 
@@ -154,11 +153,18 @@
                 <h3>¿box-sizing se hereda?</h3>
                 <p>
                     La propiedad box-sizing no se hereda de forma automática.
-                    Por eso, un elemento hijo mantiene su valor inicial si no se
-                    especifica otra regla.
+                    Por eso, un elemento hijo mantiene su valor inicial (content-box) 
+                    si no se especifica otra regla.
                 </p>
+                <div class="padre-herencia">
+                    <p>Padre: box-sizing: border-box; width: 300px</p>
+
+                    <div class="hijo-herencia">
+                        Hijo: width: 100%, sin declarar box-sizing. Se sale del padre.
+                    </div>
+                </div>
                 <p class="resultado-herencia">
-                    Resultado: box-sizing no es una prioridad heredable.
+                    Resultado: box-sizing no es una propiedad heredable.
                 </p>
 
             </article>
