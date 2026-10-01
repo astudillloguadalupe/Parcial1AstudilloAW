@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+body{
+    background-color: #f3f0ea;
+    color: #262626;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    margin-bottom: 15px;
+}
+
+p{
+    margin-bottom: 15px;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.encabezado-principal{
+   display: flex;
+    justify-content: space-between;
+     align-items: center;
+     padding: 20px 40px;
+     background-color: #2d2d2d;
+     color:#ffffff;
+}
+
+.marca{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navegacion-principal ul{
+    display: flex;
+    gap: 25px;
+}
+
+.navegacion-principal a{
+    color: #ffffff;
+}
+
+.contenido-principal{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 30px;
+}
+
+.presentacion{
+    padding: 70px 0;
+    border-bottom: 1px solid #aaaaaa;
+}
+
+.etiqueta{
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.presentacion h1{
+    max-width: 800px;
+    font-size: 3rem;
+    line-height: 1.1;
+}
+
+.introduccion{
+    max-width:700px;
+    font-size: 1.1rem;
+}
+
+.boton-principal{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 20px;
+    background-color: #2d2d2d;
+    color: #ffffff;
+}
+
+.seccion-semantica {
+    padding: 60px 0;
+    border-bottom: 1px solid #aaaaaa;
+}
+
+.titulo-seccion {
+    margin-bottom: 30px;
+}
+
+.titulo-seccion p {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.titulo-seccion h2 {
+    font-size: 2rem;
+}
+.tipo-modelo {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.proyecto {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.imagen-proyecto {
+    width: 50%;
+    min-height: 250px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #d7d0c7;
+    border: 1px solid #999999;
+}
+
+.informacion-proyecto {
+    width: 50%;
+}
+
+.seccion-cajas {
+    padding: 60px 0;
+}
+
+.explicacion {
+    max-width: 700px;
+    margin-bottom: 30px;
+}
+
+.contenedor-cajas {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+
+.caja-content {
+    box-sizing: content-box;
+
+    width: 300px;
+    padding: 30px;
+    border: 5px solid #a66f54;
+
+    background-color: #eadbd1;
+}
+
+.caja-border {
+    box-sizing: border-box;
+
+    width: 300px;
+    padding: 30px;
+    border: 5px solid #a66f54;
+
+    background-color: #eadbd1;
+}
+
+
+.caja {
+    min-height: 230px;
+}
+
+.caja strong {
+    display: block;
+    margin-top: 20px;
+}
+.prueba-herencia {
+    margin-top: 50px;
+    padding:25px;
+    border-top: 1px solid #aaaaaa;
+}
+
+.prueba-herencia h3{
+    margin-bottom:15px;
+}
+
+.resultado-herencia{
+    font-weight:bold;
+}
+.pie-principal {
+    padding: 30px;
+
+    background-color: #2d2d2d;
+    color: #ffffff;
+    text-align: center;
+}
+
+.pie-principal p {
+    margin-bottom: 5px;
+}
+

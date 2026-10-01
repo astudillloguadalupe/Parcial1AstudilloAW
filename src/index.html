@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquitectura semantica HTML5 y modelo de caja CSS</title>
+
+    <link rel="stylesheet" href="./recursos/estilos/estilos.css">
+</head>
+
+<body>
+
+
+    <header class="encabezado-principal">
+        <a href="./index.html" class="marca">
+            <span> FORMA</span>
+        </a>
+
+        <nav class="navegacion-principal">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#semantica">Semántica</a></li>
+                <li><a href="#modelo-caja">Modelo de caja</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenido-principal">
+        <section class="presentacion" id="inicio">
+            <p class="etiqueta">APLICACIONES WEB 1 | PARCIAL 1</p>
+            <h1>Arquitectura semantica HTML5 y modelo de caja CSS</h1>
+            <p class="introduccion">
+                Esta demostración relaciona la estructura semántica de HTML5
+                con el modelo de caja de CSS, mostrando cómo ambos lenguajes
+                participan en la organización y presentación de una página web.
+            </p>
+
+            <a href="#semantica" class="boton-principal">
+                Ver demostración
+            </a>
+
+        </section>
+
+        <section class="seccion-semantica" id="semantica">
+
+            <header class="titulo-seccion">
+                <p> 01 / HTML5</p>
+                <h2>Arquitectura semántica</h2>
+            </header>
+
+            <article class="proyecto">
+
+                <div class="imagen-proyecto">
+                    <p>ESTRUCTURA HTML5</p>
+                </div>
+
+                <div class="informacion-proyecto">
+                    <h3>Estructura con significado</h3>
+
+                    <p>
+                        HTML5 permite organizar el documento mediante elementos
+                        semánticos que indican la función de cada bloque de contenido.
+                    </p>
+                    <p>
+                        En esta página se utilizan header, nav, main, section,
+                        article y footer para construir una estructura clara.
+                    </p>
+
+                </div>
+
+
+            </article>
+
+        </section>
+
+        <section class="seccion-cajas" id="modelo-caja">
+
+            <header class="titulo-seccion">
+                <p>02 / CSS</p>
+                <h2>Modelo de caja </h2>
+            </header>
+
+
+            <p class="explicacion">
+                Las dos cajas tienen el mismo width, padding y border.
+                La diferencia está en cómo CSS calcula el tamaño final.
+            </p>
+
+            <div class="contenedor-cajas">
+
+                <article class="caja caja-content">
+                    <p class="tipo-modelo">Comportamiento por defecto</p>
+                    <h3>Content-box</h3>
+
+                    <p>width: 300px</p>
+                    <p>padding: 30px</p>
+                    <p>border: 5px</p>
+
+                    <p>300 + 60 + 10 = 370px</p>
+
+                    <strong>Ancho final: 370px</strong>
+                </article>
+
+                <article class="caja caja-border">
+                    <p class="tipo-modelo">Modelo alternativo</p>
+                    <h3>Border-box</h3>
+
+                    <p>width: 300px</p>
+                    <p>padding: 30px</p>
+                    <p>border: 5px</p>
+
+                    <p>El padding y el border están incluidos en los 300px.</p>
+
+                    <strong>Ancho final: 300px</strong>
+                </article>
+            </div>
+            <article class="prueba-herencia">
+                <h3>¿box-sizing se hereda?</h3>
+                <p>
+                    La propiedad box-sizing no se hereda de forma automática.
+                    Por eso, un elemento hijo mantiene su valor inicial si no se
+                    especifica otra regla.
+                </p>
+                <p class="resultado-herencia">
+                  Resultado: box-sizing no es una prioridad heredable.  
+                </p>
+                    
+            </article>
+        </section>
+    </main>
+
+    <footer class="pie-principal">
+        <p>Parcial 1 • Aplicaciones Web 1</p>
+        <p>Guadalupe Astudillo Pini</p>
+    </footer>
+
+</body>
+
+</html>
