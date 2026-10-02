@@ -1,8 +1,14 @@
+/* Reseteo global mínimo: solo se quitan margin y padding para controlar
+   el espaciado. NO se incluye box-sizing: las cajas de la demostración
+   deben partir del valor por defecto (content-box) para que la
+   comparación con border-box sea válida. */
 *{
     margin: 0;
     padding: 0;
 }
 
+/* La tipografía se define en html para que todo el documento la herede
+(font-family sí es una propiedad heredable). */
 html{
     font-family: 'Arial', sans-serif;
     font-size: 16px;
@@ -25,6 +31,7 @@ p{
     margin-bottom: 15px;
 }
 
+/* Los enlaces toman el color del texto que los rodea. */
 a{
     color: inherit;
     text-decoration: none;
@@ -34,13 +41,14 @@ ul{
     list-style: none;
 }
 
+/* Flexbox reparte la marca a la izquierda y el menú a la derecha.*/
 .encabezado-principal{
    display: flex;
-    justify-content: space-between;
-     align-items: center;
-     padding: 20px 40px;
-     background-color: #2d2d2d;
-     color:#ffffff;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px 40px;
+   background-color: #2d2d2d;
+   color:#ffffff;
 }
 
 .marca{
@@ -57,6 +65,8 @@ ul{
     color: #ffffff;
 }
 
+/* max-width + margin auto centra el contenido y evita líneas
+demasiado largas en pantallas anchas. */
 .contenido-principal{
     max-width: 1100px;
     margin: 0 auto;
@@ -115,6 +125,8 @@ ul{
     text-transform: uppercase;
     margin-bottom: 10px;
 }
+
+/* Dos columnas: esquema a la izquierda y texto a la derecha. */
 .proyecto {
     display: flex;
     gap: 40px;
@@ -152,6 +164,8 @@ ul{
     text-align: center;
 }
 
+/* main y section contienen a otros bloques, por eso se apilan en columna
+con flex: así se ve la jerarquía main > section > article. */
 .bloque-main{
     display: flex;
     flex-direction: column;
@@ -177,6 +191,7 @@ ul{
     margin-bottom: 30px;
 }
 
+/* flex-wrap evita que las cajas de ancho fijo se desborden en pantallas angostas. */
 .contenedor-cajas {
     display: flex;
     flex-wrap: wrap;
@@ -184,7 +199,8 @@ ul{
     align-items: flex-start;
 }
 
-
+/* Comportamiento por defecto: ancho final = 300 (contenido) + 60 (padding)
++ 10 (border)= 370px. Terracota para diferenciarla visualmente.*/
 .caja-content {
     box-sizing: content-box;
 
@@ -195,6 +211,9 @@ ul{
     background-color: #eadbd1;
 }
 
+/* Modelo alternativo: el padding y el border se descuentan del width,
+el ancho final es 300px. Verde para diferenciarla de la caja anterior.
+Las medidas son las mismas: solo cambia box-sizing */
 .caja-border {
     box-sizing: border-box;
 
@@ -205,7 +224,7 @@ ul{
     background-color: #dce5de;
 }
 
-
+/* Altura mínima solo estética: no forma parte de la comparación de anchos. */
 .caja {
     min-height: 230px;
 }
@@ -214,6 +233,13 @@ ul{
     display: block;
     margin-top: 20px;
 }
+
+/* Prueba de herencia de box-sizing. El padre usa border-box; el hijo NO
+declara box-sizing. Como la propiedad no se hereda, el hijo vuelve a
+content-box y, al sumar su padding y su border a width: 100%, se sale 
+del padre.
+Cálculo: contenido del padre= 300 - 40 (padding) - 10 (border) = 250px.
+Hijo = 250 + 30 (padding) + 4 (border) = 284px, es decir, 34px de más. */
 .prueba-herencia {
     margin-top: 50px;
     padding:25px;
@@ -233,6 +259,7 @@ ul{
     margin-bottom: 15px;
 } 
 
+/* Sin box-sizing a propósito: usa el valor inicial (content-box). */
 .hijo-herencia{
     width: 100%;
     padding: 15px;
@@ -243,6 +270,7 @@ ul{
 .resultado-herencia{
     font-weight:bold;
 }
+/* Pie de página: mismo gris oscuro del encabezado. */
 .pie-principal {
     padding: 30px;
 

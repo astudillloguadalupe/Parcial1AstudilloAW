@@ -12,12 +12,17 @@
 
 <body>
 
-
+    <!--<header> de la página: agrupa la marca y la navegación principal.
+        La marca va en un <a> y no en el <h1>, porque el <h1> debe describir
+        el contenido específico de la página (ver la sección "presentación").-->
     <header class="encabezado-principal">
         <a href="./index.html" class="marca">
-            <span> FORMA</span>
+            <span>FORMA</span>
         </a>
 
+        <!-- <nav> contiene solo enlaces internos de la página. Se usa <ul>/<li>
+            porque es una lista de destinos y así los lectores de pantalla
+            pueden anunciar cuántos enlaces hay. -->
         <nav class="navegacion-principal">
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
@@ -27,7 +32,12 @@
         </nav>
     </header>
 
+    <!-- <main> aparece una sola vez: identifica el contenido principal
+    y permite saltear el encabezado y el pie de página. -->
     <main class="contenido-principal">
+
+        <!-- El id="inicio" es el destino del enlace "Inicio" del <nav>.
+        El <h1> describe el tema de la página; la marca FORMA va aparte. -->
         <section class="presentacion" id="inicio">
             <p class="etiqueta">APLICACIONES WEB 1 | PARCIAL 1</p>
             <h1>Arquitectura semántica HTML5 y modelo de caja CSS</h1>
@@ -43,14 +53,24 @@
 
         </section>
 
+        <!-- Demostración 1: arquitectura semántica. Es una <section> porque
+        es un bloque temático con su propio título (<h2>). -->
         <section class="seccion-semantica" id="semantica">
 
+            <!-- Este <header> es distinto del de la página: solo encabeza esta sección. -->
             <header class="titulo-seccion">
-                <p> 01 / HTML5</p>
+                <p>01 / HTML5</p>
                 <h2>Arquitectura semántica</h2>
             </header>
 
+            <!-- <article> porque este bloque es autónomo: se entendería
+            igual si se copiara a otra página. -->
             <article class="proyecto">
+
+                <!-- Esquema visual hecho con <div> a propósito: son contenedores genéricos
+                que solo dibujan los elementos semánticos. La estructura real de la
+                página usa etiquetas semánticas. El <nav> va dentro del <header>,
+                igual que en esta página. -->
                 <div class="imagen-proyecto">
 
                     <div class="esquema-semantico">
@@ -107,12 +127,13 @@
             </article>
 
         </section>
-
+        <!-- Demostración 2: modelo de caja. Compara el comportamiento por defecto
+     (content-box) con el alternativo (border-box). -->
         <section class="seccion-cajas" id="modelo-caja">
 
             <header class="titulo-seccion">
                 <p>02 / CSS</p>
-                <h2>Modelo de caja </h2>
+                <h2>Modelo de caja</h2>
             </header>
 
 
@@ -123,6 +144,7 @@
 
             <div class="contenedor-cajas">
 
+                <!-- Comportamiento por defecto: el padding y el border se suman al width. -->
                 <article class="caja caja-content">
                     <p class="tipo-modelo">Comportamiento por defecto</p>
                     <h3>Content-box</h3>
@@ -136,6 +158,7 @@
                     <strong>Ancho final: 370px</strong>
                 </article>
 
+                <!--Modelo alternativo: el padding y el border quedan dentro del width.  -->
                 <article class="caja caja-border">
                     <p class="tipo-modelo">Modelo alternativo</p>
                     <h3>Border-box</h3>
@@ -149,6 +172,9 @@
                     <strong>Ancho final: 300px</strong>
                 </article>
             </div>
+
+            <!-- Prueba de herencia: el padre declara border-box y el hijo no declara nada.
+             Si box-sizing se heredara, el hijo cabría dentro del padre. -->
             <article class="prueba-herencia">
                 <h3>¿box-sizing se hereda?</h3>
                 <p>
@@ -171,6 +197,7 @@
         </section>
     </main>
 
+    <!-- <footer> de la página: datos de autoría. -->
     <footer class="pie-principal">
         <p>Parcial 1 • Aplicaciones Web 1</p>
         <p>Guadalupe Astudillo Pini</p>
